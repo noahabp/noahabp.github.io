@@ -67,7 +67,8 @@ body {
 
 .site-nav ul {
   display: flex;
-  gap: 1.4rem;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -108,14 +109,34 @@ body {
   border-bottom-color: rgba(255, 255, 255, 0.28);
 }
 
-.hero .site-nav .wordmark { color: #ffffff; }
+.hero .site-nav .wordmark,
+.band .site-nav .wordmark { color: #ffffff; }
 
-.hero .site-nav ul a { color: rgba(255, 255, 255, 0.78); }
+.hero .site-nav ul a,
+.band .site-nav ul a { color: rgba(255, 255, 255, 0.78); }
 
 .hero .site-nav ul a:hover,
-.hero .site-nav ul a:focus-visible { color: #ffffff; }
+.hero .site-nav ul a:focus-visible,
+.band .site-nav ul a:hover,
+.band .site-nav ul a:focus-visible { color: #ffffff; }
 
-.hero .site-nav ul a[aria-current="page"] { color: #ffffff; border-bottom-color: #ffffff; }
+.hero .site-nav ul a[aria-current="page"],
+.band .site-nav ul a[aria-current="page"] { color: #ffffff; border-bottom-color: #ffffff; }
+
+/* Slim cardinal band — interior pages (Research, Teaching) */
+.band { background: var(--accent); }
+
+.band-inner {
+  padding: 1.4rem clamp(1.25rem, 5vw, 4rem);
+}
+
+.band .site-nav {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.band + .page { padding-top: 2.75rem; }
 
 .hero-text {
   margin: auto 0 auto auto;
