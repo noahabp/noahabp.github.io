@@ -97,33 +97,14 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: clamp(30rem, 88vh, 44rem);
+  min-height: clamp(26rem, 80vh, 42rem);
   background:
     linear-gradient(rgba(28, 25, 23, 0.50), rgba(28, 25, 23, 0.50)),
     url("assets/hero.jpg") 30% 22% / cover no-repeat;
-  padding: 1.75rem clamp(1.25rem, 5vw, 4rem) 3rem;
+  padding: 2rem clamp(1.25rem, 5vw, 4rem) 3rem;
 }
 
-.hero .site-nav {
-  margin-bottom: 0;
-  border-bottom-color: rgba(255, 255, 255, 0.28);
-}
-
-.hero .site-nav .wordmark,
-.band .site-nav .wordmark { color: #ffffff; }
-
-.hero .site-nav ul a,
-.band .site-nav ul a { color: rgba(255, 255, 255, 0.78); }
-
-.hero .site-nav ul a:hover,
-.hero .site-nav ul a:focus-visible,
-.band .site-nav ul a:hover,
-.band .site-nav ul a:focus-visible { color: #ffffff; }
-
-.hero .site-nav ul a[aria-current="page"],
-.band .site-nav ul a[aria-current="page"] { color: #ffffff; border-bottom-color: #ffffff; }
-
-/* Slim cardinal band — interior pages (Research, Teaching) */
+/* Slim cardinal band — the site-wide header on every page */
 .band { background: var(--accent); }
 
 .band-inner {
@@ -135,6 +116,15 @@ body {
   padding-bottom: 0;
   border-bottom: none;
 }
+
+.band .site-nav .wordmark { color: #ffffff; }
+
+.band .site-nav ul a { color: rgba(255, 255, 255, 0.78); }
+
+.band .site-nav ul a:hover,
+.band .site-nav ul a:focus-visible { color: #ffffff; }
+
+.band .site-nav ul a[aria-current="page"] { color: #ffffff; border-bottom-color: #ffffff; }
 
 .band + .page { padding-top: 2.75rem; }
 
@@ -164,7 +154,7 @@ body {
   .hero {
     min-height: 0;
     background: var(--accent);
-    padding: 1.75rem 1.25rem 2.5rem;
+    padding: 0.25rem 1.25rem 2.5rem;
   }
   .hero-headshot {
     display: block;
@@ -173,7 +163,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 0 4px #ffffff;
-    margin: 2.25rem 0 1.5rem;
+    margin: 0.75rem 0 1.5rem;
   }
   .hero-text { width: 100%; margin: 0; }
 }
@@ -305,15 +295,6 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .links li:not(:last-child)::after { content: "·"; color: var(--muted); margin: 0 0.65rem; }
 
-.portrait {
-  float: right;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0.3rem 0 1rem 1.5rem;
-}
-
 footer {
   margin-top: 3.5rem;
   padding-top: 1rem;
@@ -326,5 +307,4 @@ footer {
 
 @media (max-width: 640px) {
   html { font-size: 16px; }
-  .portrait { float: none; margin: 0 0 1.25rem; }
 }
