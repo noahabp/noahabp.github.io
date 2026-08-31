@@ -301,6 +301,16 @@ h2 {
   border-left: 2px solid var(--rule);
 }
 
+.course-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.1rem;
+}
+
 /* ---------- Links, contact, footer ---------- */
 
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2.5px; }
