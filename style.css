@@ -235,14 +235,25 @@ h2 {
 
 .btn:hover, .btn:focus-visible { background: #6f1010; }
 
-.keywords {
+.keywords { margin: 1.4rem 0 0; }
+
+.keywords p {
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
   line-height: 2.1;
-  margin: 1.4rem 0 0;
+  margin: 0;
+  padding-left: 7.2rem;
+  text-indent: -7.2rem;
+}
+
+.kw-label {
+  display: inline-block;
+  width: 7.2rem;
+  text-indent: 0;
+  color: var(--muted);
 }
 
 .diss-figure { margin: 1.4rem 0 0.4rem; }
